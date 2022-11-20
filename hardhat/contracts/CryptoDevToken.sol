@@ -17,6 +17,7 @@ contract CryptoDevToken is ERC20, Ownable {
     constructor(address _cryptoDevContract) ERC20("Crypto Dev Token", "CD") {
         CryptoDevsNFT = ICryptoDevs(_cryptoDevContract);
     }
+    
 
     function mint(uint256 amount) public payable {
         uint256 _requiredAmount = tokenPrice * amount;
